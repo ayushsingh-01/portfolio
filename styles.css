@@ -258,6 +258,7 @@ a:hover {
 
 .hero-content {
     animation: slideInLeft 1s ease-out;
+    text-align: center;
 }
 
 .hero-title {
@@ -291,14 +292,17 @@ a:hover {
 
 .hero-description {
     font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-xl);
+    margin: 0 auto var(--spacing-xl);
     max-width: 600px;
+    text-align: center;
 }
 
 .hero-buttons {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--spacing-md);
 }
 
 .hero-image {
@@ -442,6 +446,7 @@ img{
 
 .project-content {
     padding: var(--spacing-xl);
+    text-align: center;
 }
 
 .project-content h3 {
@@ -1516,52 +1521,50 @@ img{
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --white: #1e293b;
-        --light-gray: #0f172a;
-        --gray-100: #1e293b;
-        --gray-200: #334155;
-        --gray-300: #475569;
-        --gray-400: #64748b;
-        --gray-500: #94a3b8;
-        --gray-600: #cbd5e1;
-        --gray-700: #e2e8f0;
-        --gray-800: #f1f5f9;
-        --gray-900: #f8fafc;
-        --black: #ffffff;
-    }
-    
-    body {
-        background-color: var(--light-gray);
-        color: var(--gray-700);
-    }
-    
-    .navbar {
-        background-color: rgba(30, 41, 59, 0.95);
-    }
-    
-    .skill-card,
-    .project-card,
-    .testimonial-card,
-    .pricing-card,
-    .contact-form-container,
-    .faq-item {
-        background: var(--gray-100);
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        background: var(--gray-100);
-        border-color: var(--gray-300);
-        color: var(--gray-700);
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
+html[data-theme="dark"] {
+    --white: #1e293b;
+    --light-gray: #0f172a;
+    --gray-100: #1e293b;
+    --gray-200: #334155;
+    --gray-300: #475569;
+    --gray-400: #64748b;
+    --gray-500: #94a3b8;
+    --gray-600: #cbd5e1;
+    --gray-700: #e2e8f0;
+    --gray-800: #f1f5f9;
+    --gray-900: #f8fafc;
+    --black: #ffffff;
+}
+
+html[data-theme="dark"] body {
+    background-color: var(--light-gray);
+    color: var(--gray-700);
+}
+
+html[data-theme="dark"] .navbar {
+    background-color: rgba(30, 41, 59, 0.95);
+}
+
+html[data-theme="dark"] .skill-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .testimonial-card,
+html[data-theme="dark"] .pricing-card,
+html[data-theme="dark"] .contact-form-container,
+html[data-theme="dark"] .faq-item {
+    background: var(--gray-100);
+}
+
+html[data-theme="dark"] .form-group input,
+html[data-theme="dark"] .form-group select,
+html[data-theme="dark"] .form-group textarea {
+    background: var(--gray-100);
+    border-color: var(--gray-300);
+    color: var(--gray-700);
+}
+
+html[data-theme="dark"] .form-group input:focus,
+html[data-theme="dark"] .form-group select:focus,
+html[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
